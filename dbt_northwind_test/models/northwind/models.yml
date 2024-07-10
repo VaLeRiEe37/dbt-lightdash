@@ -65,12 +65,22 @@ models:
     columns:
       - name: product_name
         meta:
+          metrics:
+            count_of_products:
+              type: count
+              label: 'Count of Products'
+              description: 'The total number of products.'
           dimension:
             type: string
             label: 'Product Name'
             description: 'The name of the product.'
       - name: num_orders
         meta:
+          metrics:
+            number_of_orders:
+              type: sum
+              label: 'Number of Orders'
+              description: 'The total number of orders for the product.'
           dimension:
             type: number
             label: 'Number of Orders'
